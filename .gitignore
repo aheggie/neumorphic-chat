@@ -5,7 +5,4 @@ coverage/
 .vscode/
 .env
 
-#for now
-makefile
-
 .code-workspace
