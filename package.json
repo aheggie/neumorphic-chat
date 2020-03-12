@@ -1,0 +1,14 @@
+{
+  "name": "blank-react-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier \"src/**/*.{js,html}\" --write"
+  },
+  "author": "Alex Heggie",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "prettier": "^1.19.1"
+  }
+}

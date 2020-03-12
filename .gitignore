@@ -1,0 +1,11 @@
+node_modules/
+.cache/
+dist/
+coverage/
+.vscode/
+.env
+
+#for now
+makefile
+
+.code-workspace
