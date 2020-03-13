@@ -1,3 +1,6 @@
+d:
+	git diff
+
 a:
 	git add .
 s:
