@@ -8,7 +8,7 @@ const App = () => {
   const [currentMessage, setCurrentMessage] = useState("");
   const [messagesArray, setMessagesArray] = useState([]);
 
-  const updateMessages = messageString => {
+  const appendCurrentMessageToMessages = messageString => {
     const newMessages = messagesArray.concat([messageString]);
     setMessagesArray(newMessages);
   };
@@ -19,7 +19,7 @@ const App = () => {
       <ChatBox
         currentMessage={currentMessage}
         setCurrentMessage={setCurrentMessage}
-        updateMessages={updateMessages}
+        appendCurrentMessageToMessages={appendCurrentMessageToMessages}
       />
     </div>
   );

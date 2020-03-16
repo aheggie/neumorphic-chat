@@ -1,12 +1,23 @@
 import React from "react";
 
-const ChatBox = ({ currentMessage, setCurrentMessage, updateMessages }) => {
-  const val = `message ${Math.floor(Math.random() * 105)}`;
+const ChatBox = ({
+  currentMessage,
+  setCurrentMessage,
+  appendCurrentMessageToMessages
+}) => {
   return (
     <>
-      <button onClick={() => setCurrentMessage(val)}>{val}</button>
-      <button onClick={() => updateMessages(currentMessage)}>
-        {currentMessage}
+      <input
+        value={currentMessage}
+        onChange={e => setCurrentMessage(e.target.value)}
+      ></input>
+      <button
+        onClick={() => {
+          appendCurrentMessageToMessages(currentMessage);
+          setCurrentMessage("");
+        }}
+      >
+        Send
       </button>
     </>
   );
