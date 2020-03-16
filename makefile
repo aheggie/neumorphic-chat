@@ -6,6 +6,9 @@ a:
 s:
 	git status
 
+# scripts:
+# 	grep -E '^scripts":\s{' "package.json"
+
 # prettier:
 # 	npm install -D prettier
 

@@ -1,9 +1,9 @@
 import React from "react";
 import Message from "./Message";
 
-const Messages = ({ messages }) => (
+const Messages = ({ messagesArray }) => (
   <ul>
-    {messages.map((message, i) => (
+    {messagesArray.map((message, i) => (
       <Message key={i} message={message} />
     ))}
   </ul>
