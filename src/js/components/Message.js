@@ -1,9 +1,9 @@
 import React from "react";
 
 const Message = ({ message }) => (
-  <li className="message">
+  <div className="message">
     <p>{message}</p>
-  </li>
+  </div>
 );
 
 export default Message;
