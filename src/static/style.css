@@ -26,10 +26,18 @@ html {
 }
 
 .message {
+  text-align: center;
   margin: 44px auto;
   width: 50vw;
   min-height: 100px;
   /* border: 1px solid pink; */
+  font: 90px/1.6 normal normal Arial, Helvetica, sans-serif;
+
+  /*this is the chisel text effect*/
+  /* color: #eee;
+  text-shadow: 2px 2px #fff, -2px -2px #ccc; */
+  color: rgb(78, 178, 236);
+  text-shadow: 2px 2px rgb(95, 195, 253), -2px -2px rgb(42, 143, 202);
   /*this is from neumorphism.io*/
   border-radius: 12px;
   background: #55b9f3;
