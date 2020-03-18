@@ -9,18 +9,19 @@ const ChatBox = ({
     //dont let users send blank messages
     if (currentMessage !== "") {
       appendCurrentMessageToMessages(currentMessage);
+      //this resets the input box
       setCurrentMessage("");
     }
   };
   return (
-    <>
+    <div id="chat">
       <input
         value={currentMessage}
         onChange={e => setCurrentMessage(e.target.value)}
         onKeyPress={e => (e.key == "Enter" ? sendMessage() : null)}
       ></input>
       <button onClick={sendMessage}>Send</button>
-    </>
+    </div>
   );
 };
 

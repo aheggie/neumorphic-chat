@@ -2,7 +2,7 @@ import React from "react";
 import Message from "./Message";
 
 const Messages = ({ messagesArray }) => (
-  <ul>
+  <ul id="messages">
     {messagesArray.map((message, i) => (
       <Message key={i} message={message} />
     ))}

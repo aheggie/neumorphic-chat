@@ -1,3 +1,15 @@
 html {
   background-color: blue;
 }
+
+#chat {
+  position: fixed;
+  bottom: 0;
+  margin: auto;
+  border: 1px solid pink;
+}
+
+#messages {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
