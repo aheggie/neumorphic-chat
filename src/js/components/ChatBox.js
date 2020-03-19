@@ -16,11 +16,14 @@ const ChatBox = ({
   return (
     <div id="chat">
       <input
+        id="chat-input"
         value={currentMessage}
         onChange={e => setCurrentMessage(e.target.value)}
         onKeyPress={e => (e.key == "Enter" ? sendMessage() : null)}
       ></input>
-      <button onClick={sendMessage}>Send</button>
+      <button id="chat-button" onClick={sendMessage}>
+        Send
+      </button>
     </div>
   );
 };

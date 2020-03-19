@@ -1,3 +1,5 @@
+/* @import url('https://fonts.googleapis.com/css?family=Stylish&display=swap'); */
+
 body,
 * {
   box-sizing: border-box;
@@ -9,20 +11,39 @@ html {
   background-color: #55b9f3;
 }
 
+/*chat box elements*/
+
 #chat {
+  --width: 500px;
+  --offset: calc(50% - calc(var(--width) / 2));
   position: fixed;
   bottom: 0;
-  width: 14vw;
-  left: 43vw;
-  right: 43vw;
-  border: 1px solid pink;
+  width: var(--width);
+  left: var(--offset);
+  right: var(--offset);
 }
+
+#chat-input {
+  --height: 75px;
+  /* --width: calc(var(--height) * 3.22); */
+  height: var(--height);
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  outline: none;
+
+  color: cornflowerblue;
+  font-size: 20px;
+  padding-left: 25px;
+}
+
+/* message elements */
 
 #messages {
   padding-top: 20px;
   padding-bottom: 40px;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 .message {
@@ -31,8 +52,9 @@ html {
   width: 50vw;
   min-height: 100px;
   /* border: 1px solid pink; */
-  font: 90px/1.6 normal normal Arial, Helvetica, sans-serif;
-
+  font: 60px/1.6 normal normal;
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: "Baloo Chettan 2", Arial, Helvetica, sans-serif; */
   /*this is the chisel text effect*/
   /* color: #eee;
   text-shadow: 2px 2px #fff, -2px -2px #ccc; */
