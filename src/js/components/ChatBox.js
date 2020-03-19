@@ -21,9 +21,9 @@ const ChatBox = ({
         onChange={e => setCurrentMessage(e.target.value)}
         onKeyPress={e => (e.key == "Enter" ? sendMessage() : null)}
       ></input>
-      <button id="chat-button" onClick={sendMessage}>
+      {/* <button id="chat-button" onClick={sendMessage}>
         Send
-      </button>
+      </button> */}
     </div>
   );
 };
