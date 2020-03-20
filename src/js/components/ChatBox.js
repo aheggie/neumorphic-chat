@@ -16,6 +16,8 @@ const ChatBox = ({
   return (
     <div id="chat">
       <input
+        // https://stackoverflow.com/questions/28889826/set-focus-on-input-after-render
+        autoFocus
         id="chat-input"
         value={currentMessage}
         onChange={e => setCurrentMessage(e.target.value)}
