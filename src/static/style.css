@@ -5,6 +5,7 @@ body,
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 html {
@@ -40,10 +41,17 @@ html {
 /* message elements */
 
 #messages {
+  width: 100vw;
+  /*this has to be the issue*/
+  /* position: fixed; */
+  min-height: 100vh;
+  bottom: 0;
   padding-top: 20px;
-  padding-bottom: 40px;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  padding-bottom: 95px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .message {
@@ -69,21 +77,21 @@ html {
 /* scrollbar from webkit */
 
 /* width */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 10px;
-}
+} */
 
 /* Track */
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.18);
-}
+} */
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.68);
-}
+} */
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.85);
-}
+} */
