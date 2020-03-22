@@ -92,10 +92,25 @@ html {
 /*its catching but it doesn't do what i want*/
 /*also see where it puts the classname*/
 .message-anim-enter {
-  -webkit-transition: 5s;
-  transition: 5s;
+  color: #55b9f3;
+  text-shadow: none;
+  /*
+  border-radius: 12px;
+  background: #55b9f3;
+  */
+  box-shadow: 20px 20px 60px rgba(72, 157, 207, 0),
+    -20px -20px 60px rgba(97, 213, 255, 0);
 }
 .message-anim-enter.message-anim-enter-active {
+  color: rgb(78, 178, 236);
+  -webkit-transition: 5s;
+  transition: 5s;
+  text-shadow: 2px 2px rgb(95, 195, 253), -2px -2px rgb(42, 143, 202);
+  /*
+  border-radius: 12px;
+  background: #55b9f3;
+  */
+  box-shadow: 20px 20px 60px #489dcf, -20px -20px 60px #62d5ff;
 }
 
 /* scrollbar from webkit */
