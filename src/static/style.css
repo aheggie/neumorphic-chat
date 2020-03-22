@@ -103,8 +103,9 @@ html {
 }
 .message-anim-enter.message-anim-enter-active {
   color: rgb(78, 178, 236);
-  -webkit-transition: 5s;
-  transition: 5s;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+  transition-timing-function: steps(10, end);
   text-shadow: 2px 2px rgb(95, 195, 253), -2px -2px rgb(42, 143, 202);
   /*
   border-radius: 12px;
