@@ -8,8 +8,18 @@ const App = () => {
   const [currentMessage, setCurrentMessage] = useState("");
   const [messagesArray, setMessagesArray] = useState([]);
 
+  const slashCommands = messageString => {
+    switch (messageString) {
+      case "/shrug":
+        return "¯\\_(ツ)_/¯";
+      default:
+        return messageString;
+    }
+  };
+
   const appendCurrentMessageToMessages = messageString => {
-    const newMessages = messagesArray.concat([messageString]);
+    const processedString = slashCommands(messageString);
+    const newMessages = messagesArray.concat([processedString]);
     setMessagesArray(newMessages);
   };
 
