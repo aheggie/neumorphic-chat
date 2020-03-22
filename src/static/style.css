@@ -102,9 +102,14 @@ html {
     -20px -20px 60px rgba(97, 213, 255, 0);
 }
 .message-anim-enter.message-anim-enter-active {
+  --timer: steps(10, end);
+  --text-delay: 0.15s;
   color: rgb(78, 178, 236);
-  -webkit-transition: 0.75s;
-  transition: 0.75s;
+  /* -webkit-transition: box-shadow 0.75s steps(10, end) 0s,
+    color 0.75s steps(10, end) 0s, text-shadow 0.75s steps(10, end) 0s; */
+  transition: box-shadow 0.75s var(--timer) 0s,
+    color 0.75s var(--timer) var(--text-delay),
+    text-shadow 0.75s var(--timer) var(--text-delay);
   transition-timing-function: steps(10, end);
   text-shadow: 2px 2px rgb(95, 195, 253), -2px -2px rgb(42, 143, 202);
   /*
