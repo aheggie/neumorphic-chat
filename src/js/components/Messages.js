@@ -9,7 +9,7 @@ const Messages = ({ messagesArray }) => (
       <CSSTransition
         key={i}
         classNames="message-anim"
-        timeout={{ enter: 5000, exit: 5000 }}
+        timeout={{ enter: 750, exit: 750 }}
       >
         <Message key={i} message={message} />
       </CSSTransition>
