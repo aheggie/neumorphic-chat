@@ -1,12 +1,20 @@
 import React from "react";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+
 import Message from "./Message";
 
 const Messages = ({ messagesArray }) => (
-  <ul id="messages">
+  <TransitionGroup component="ul" id="messages">
     {messagesArray.map((message, i) => (
-      <Message key={i} message={message} />
+      <CSSTransition
+        key={i}
+        classNames="message-anim"
+        timeout={{ enter: 5000, exit: 5000 }}
+      >
+        <Message key={i} message={message} />
+      </CSSTransition>
     ))}
-  </ul>
+  </TransitionGroup>
 );
 
 export default Messages;

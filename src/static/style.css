@@ -74,6 +74,30 @@ html {
   box-shadow: 20px 20px 60px #489dcf, -20px -20px 60px #62d5ff;
 }
 
+/* .message-anim-enter {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  max-height: 0;
+  padding: 0 !important;
+  -webkit-transform: translateX(-120%);
+  transform: translateX(-120%);
+}
+.message-anim-enter.message-anim-enter-active {
+  max-height: 60px;
+  padding: 2rem 0 !important;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+} */
+
+/*its catching but it doesn't do what i want*/
+/*also see where it puts the classname*/
+.message-anim-enter {
+  -webkit-transition: 5s;
+  transition: 5s;
+}
+.message-anim-enter.message-anim-enter-active {
+}
+
 /* scrollbar from webkit */
 
 /* width */
