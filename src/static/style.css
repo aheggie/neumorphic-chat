@@ -38,6 +38,13 @@ html {
   padding-left: 25px;
 }
 
+/* 833 px is where 500px === 60vw so the transition is seamless */
+@media only screen and (max-width: 833px) {
+  #chat {
+    --width: 60vw;
+  }
+}
+
 /* message elements */
 
 #messages {
