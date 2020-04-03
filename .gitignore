@@ -8,3 +8,8 @@ coverage/
 scratch/
 
 *.code-workspace
+.firebase/
+.firebaserc
+
+#uncertain if this should be gitignored
+database.rules.json
