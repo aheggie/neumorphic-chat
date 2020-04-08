@@ -4,6 +4,8 @@ import { render } from "react-dom";
 import Messages from "./Messages";
 import ChatBox from "./ChatBox";
 
+import base from "../base";
+
 class ClassApp extends React.Component {
   // const [currentMessage, setCurrentMessage] = useState("");
   // const [messagesArray, setMessagesArray] = useState([]);
@@ -25,7 +27,6 @@ class ClassApp extends React.Component {
   appendCurrentMessageToMessages = messageString => {
     const processedString = this.slashCommands(messageString);
     const messagesArray = this.state.messagesArray;
-    console.log(messagesArray);
     const newMessages = messagesArray.concat([processedString]);
     this.setState({ messagesArray: newMessages });
   };
@@ -33,6 +34,16 @@ class ClassApp extends React.Component {
   setCurrentMessage = messageString => {
     this.setState({ currentMessage: messageString });
   };
+
+  componentDidMount() {
+    const params = { chatId: "TestChatRoom" };
+
+    this.ref = base.syncState(`${params.chatId}/messagesArray`, {
+      context: this,
+      state: "messagesArray",
+      asArray: true
+    });
+  }
 
   // adapted from https://stackoverflow.com/questions/31173359/can-i-make-the-browser-window-start-at-the-bottom-of-the-page?noredirect=1&lq=1
   // useEffect(() => {
@@ -43,6 +54,7 @@ class ClassApp extends React.Component {
     window.scrollTo(0, 99999);
   }
   render() {
+    console.log("return", this.state.messagesArray);
     return (
       <div>
         <Messages messagesArray={this.state.messagesArray} />
