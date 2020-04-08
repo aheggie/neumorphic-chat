@@ -19,7 +19,9 @@
   "author": "Alex Heggie",
   "license": "UNLICENSED",
   "dependencies": {
+    "firebase": "^7.13.2",
     "prettier": "^1.19.1",
+    "re-base": "^4.0.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-transition-group": "^4.3.0"

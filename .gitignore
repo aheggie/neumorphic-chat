@@ -13,3 +13,6 @@ scratch/
 
 #uncertain if this should be gitignored
 database.rules.json
+
+#check this in later
+base.js
