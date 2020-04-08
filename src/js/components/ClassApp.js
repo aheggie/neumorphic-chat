@@ -36,7 +36,7 @@ class ClassApp extends React.Component {
   };
 
   componentDidMount() {
-    const params = { chatId: "TestChatRoom" };
+    const params = { chatId: process.env.ROOM_NAME };
 
     this.ref = base.syncState(`${params.chatId}/messagesArray`, {
       context: this,
