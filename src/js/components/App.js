@@ -6,7 +6,9 @@ import ChatBox from "./ChatBox";
 
 const App = () => {
   const [currentMessage, setCurrentMessage] = useState("");
-  const [messagesArray, setMessagesArray] = useState([]);
+  const [messagesArray, setMessagesArray] = useState([
+    /*process.env.AUTH_DOMAIN*/
+  ]);
 
   const slashCommands = messageString => {
     switch (messageString) {
