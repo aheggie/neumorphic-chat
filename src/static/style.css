@@ -38,13 +38,6 @@ html {
   padding-left: 25px;
 }
 
-/* 833 px is where 500px === 60vw so the transition is seamless */
-@media only screen and (max-width: 833px) {
-  #chat {
-    --width: 60vw;
-  }
-}
-
 /* message elements */
 
 #messages {
@@ -79,6 +72,24 @@ html {
   border-radius: 12px;
   background: #55b9f3;
   box-shadow: 20px 20px 60px #489dcf, -20px -20px 60px #62d5ff;
+}
+
+/* 833 px is where 500px === 60vw so the transition is seamless */
+@media only screen and (max-width: 833px) {
+  #chat {
+    --width: 60vw;
+  }
+
+  .message {
+    margin: 44px auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 85px;
+    font-size: 45px;
+    line-height: 1.2;
+  }
 }
 
 /* .message-anim-enter {
