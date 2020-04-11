@@ -36,9 +36,9 @@ class ClassApp extends React.Component {
   };
 
   componentDidMount() {
-    const params = { chatId: process.env.ROOM_NAME };
+    const room = this.props.chatId || process.env.ROOM_NAME;
 
-    this.ref = base.syncState(`${params.chatId}/messagesArray`, {
+    this.ref = base.syncState(`${room}/messagesArray`, {
       context: this,
       state: "messagesArray",
       asArray: true
@@ -54,7 +54,6 @@ class ClassApp extends React.Component {
     window.scrollTo(0, 99999);
   }
   render() {
-    console.log("return", this.state.messagesArray);
     return (
       <div>
         <Messages messagesArray={this.state.messagesArray} />
@@ -68,4 +67,4 @@ class ClassApp extends React.Component {
   }
 }
 
-render(<ClassApp />, document.getElementById("root"));
+export default ClassApp;
