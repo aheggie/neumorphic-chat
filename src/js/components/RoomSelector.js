@@ -4,7 +4,7 @@ import { Link } from "@reach/router";
 const RoomSelector = () => {
   const [roomName, setRoomName] = useState("");
   return (
-    <div id="room-entry-group">
+    <div className="entry-group" id="room-entry-group">
       <p>Please select a chatroom name</p>
       <input
         // how to autofocus :

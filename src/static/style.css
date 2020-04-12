@@ -14,19 +14,47 @@ html {
 
 /*chat box elements*/
 
-#chat {
+.entry-group {
   --width: 500px;
   --offset: calc(50% - calc(var(--width) / 2));
   position: fixed;
-  bottom: 0;
   width: var(--width);
   left: var(--offset);
   right: var(--offset);
 }
 
+#chat-entry-group {
+  bottom: 0;
+}
+
+#room-entry-group {
+  --width: 400px;
+  top: 25vh;
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  justify-items: center;
+  gap: 20px;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  outline: none;
+
+  color: cornflowerblue;
+  font-size: 20px;
+  padding-left: 25px;
+}
+
+#room-input {
+  height: 50px;
+}
+
 #chat-input {
   --height: 75px;
-  /* --width: calc(var(--height) * 3.22); */
   height: var(--height);
   width: 100%;
   margin-bottom: 20px;

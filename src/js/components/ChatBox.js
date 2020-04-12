@@ -14,7 +14,7 @@ const ChatBox = ({
     }
   };
   return (
-    <div id="chat">
+    <div className="entry-group" id="chat-entry-group">
       <input
         // how to autofocus :
         // https://stackoverflow.com/questions/28889826/set-focus-on-input-after-render
