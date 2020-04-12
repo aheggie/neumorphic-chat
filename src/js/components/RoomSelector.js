@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "@reach/router";
+import { Link, navigate } from "@reach/router";
 
 const RoomSelector = () => {
   const [roomName, setRoomName] = useState("");
   return (
     <div className="entry-group" id="room-entry-group">
-      <p>Please select a chatroom name</p>
       <input
         // how to autofocus :
         // https://stackoverflow.com/questions/28889826/set-focus-on-input-after-render
@@ -15,9 +14,13 @@ const RoomSelector = () => {
         autoFocus
         id="room-input"
         value={roomName}
+        placeholder="Please select a chatroom name"
         onChange={e => setRoomName(e.target.value)}
+        onKeyPress={e => (e.key == "Enter" ? navigate(roomName) : null)}
       />
-      <Link to={roomName}>go to chatroom</Link>
+      <Link to={roomName}>
+        <button id="room-button">go</button>
+      </Link>
     </div>
   );
 };

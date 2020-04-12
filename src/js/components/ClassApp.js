@@ -1,5 +1,4 @@
 import React /*, { useState, useEffect }*/ from "react";
-import { render } from "react-dom";
 
 import Messages from "./Messages";
 import ChatBox from "./ChatBox";
