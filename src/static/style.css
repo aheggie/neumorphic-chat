@@ -46,6 +46,10 @@ input {
   padding-left: 25px;
 }
 
+input::placeholder {
+  color: cornflowerblue;
+}
+
 #room-input {
   height: 50px;
   border-top-right-radius: 0px;
@@ -78,7 +82,9 @@ input {
   color: cornflowerblue; /*  rgb(118, 199, 247); */
   /* text-shadow: -1px -1px rgb(95, 195, 253), 1px 1px rgb(42, 143, 202); */
   /*this is from neumorphism.io*/
-  background-color: rgb(215, 241, 255); /*rgb(140, 208, 247);*/
+  background-color: whitesmoke;
+  /*rgb(215, 241, 255); */
+  /*rgb(140, 208, 247);*/
 }
 
 /* message elements */
