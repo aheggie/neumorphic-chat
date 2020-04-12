@@ -4,20 +4,13 @@ import { render } from "react-dom";
 import Messages from "./Messages";
 import ChatBox from "./ChatBox";
 
+import { slashCommands } from "../text_preprocessor";
+
 const App = () => {
   const [currentMessage, setCurrentMessage] = useState("");
   const [messagesArray, setMessagesArray] = useState([
     /*process.env.AUTH_DOMAIN*/
   ]);
-
-  const slashCommands = messageString => {
-    switch (messageString) {
-      case "/shrug":
-        return "¯\\_(ツ)_/¯";
-      default:
-        return messageString;
-    }
-  };
 
   const appendCurrentMessageToMessages = messageString => {
     const processedString = slashCommands(messageString);

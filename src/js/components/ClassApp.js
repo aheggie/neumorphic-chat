@@ -4,6 +4,7 @@ import Messages from "./Messages";
 import ChatBox from "./ChatBox";
 
 import base from "../base";
+import { slashCommands } from "../text_preprocessor";
 
 class ClassApp extends React.Component {
   // const [currentMessage, setCurrentMessage] = useState("");
@@ -14,17 +15,8 @@ class ClassApp extends React.Component {
     messagesArray: []
   };
 
-  slashCommands = messageString => {
-    switch (messageString) {
-      case "/shrug":
-        return "¯\\_(ツ)_/¯";
-      default:
-        return messageString;
-    }
-  };
-
   appendCurrentMessageToMessages = messageString => {
-    const processedString = this.slashCommands(messageString);
+    const processedString = slashCommands(messageString);
     const messagesArray = this.state.messagesArray;
     const newMessages = messagesArray.concat([processedString]);
     this.setState({ messagesArray: newMessages });
