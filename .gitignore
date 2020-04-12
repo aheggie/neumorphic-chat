@@ -13,3 +13,5 @@ scratch/
 
 #uncertain if this should be gitignored
 database.rules.json
+
+*.log
