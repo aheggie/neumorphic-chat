@@ -72,6 +72,13 @@ input {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   outline: none;
+  font-size: 35px;
+  /* font-family: "Baloo Chettan 2", Arial, Helvetica, sans-serif; */
+  /* text-shadow: 2px 2px #fff, -2px -2px #ccc; */
+  color: cornflowerblue; /*  rgb(118, 199, 247); */
+  /* text-shadow: -1px -1px rgb(95, 195, 253), 1px 1px rgb(42, 143, 202); */
+  /*this is from neumorphism.io*/
+  background-color: rgb(215, 241, 255); /*rgb(140, 208, 247);*/
 }
 
 /* message elements */

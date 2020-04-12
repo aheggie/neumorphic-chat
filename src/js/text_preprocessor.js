@@ -3,10 +3,8 @@ const slashCommands = messageString => {
     case "/shrug":
       return "¯\\_(ツ)_/¯";
     case "/mandala":
-      return `
-🎈🎆🎈
-🎆🎇🎆
-🎈🎆🎈`;
+      //how to force a newline
+      return "🎈🎆🎈\n🎆🎇🎆\n🎈🎆🎈";
     default:
       return messageString;
   }

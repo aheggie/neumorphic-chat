@@ -19,7 +19,7 @@ const RoomSelector = () => {
         onKeyPress={e => (e.key == "Enter" ? navigate(roomName) : null)}
       />
       <Link to={roomName}>
-        <button id="room-button">go</button>
+        <button id="room-button">↠</button>
       </Link>
     </div>
   );
